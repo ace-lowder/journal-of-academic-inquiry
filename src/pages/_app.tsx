@@ -4,7 +4,7 @@ import Header from '../components/layout/Header';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <div>
+    <div className="max-w-[1280px] mx-auto space-y-8">
       <Header />
       <Component {...pageProps} />
     </div>
