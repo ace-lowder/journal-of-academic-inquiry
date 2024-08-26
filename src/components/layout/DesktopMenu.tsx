@@ -77,7 +77,7 @@ const DesktopMenu: React.FC = () => {
             </div>
           </Link>
           {subItems && openDropdown === text && (
-            <div className="absolute top-full -left-4 w-48 mt-[33px] bg-white border border-t-0 border-gray-300 z-10">
+            <div className="absolute top-full -left-4 w-48 mt-[35px] bg-white border border-t-0 border-gray-300 z-10">
               {subItems.map(({ text, href }) => (
                 <Link key={text} href={href} passHref>
                   <div className="px-4 py-2 hover:bg-gray-100 text-gray-700">
