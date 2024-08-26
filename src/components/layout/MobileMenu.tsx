@@ -19,8 +19,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
       text: 'About',
       href: '/about',
       subItems: [
-        { text: 'Mission Statement', href: '/about/mission' },
-        { text: 'Focus Areas', href: '/about/focus' },
+        { text: 'Mission Statement', href: '/about' },
+        { text: 'Focus Areas', href: '/about' },
       ],
     },
     {
@@ -28,15 +28,15 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
       href: '/services',
       subItems: [
         { text: 'Coaching', href: '/services/coaching' },
-        { text: 'Online Review', href: '/services/review' },
+        { text: 'Online Review', href: '/services' },
       ],
     },
     {
       text: 'Submit',
       href: '/submit',
       subItems: [
-        { text: 'Requirements', href: '/submit/requirements' },
-        { text: 'How to Submit', href: '/submit/how-to' },
+        { text: 'Requirements', href: '/submit' },
+        { text: 'How to Submit', href: '/submit' },
       ],
     },
     { text: 'Contact', href: '/contact' },

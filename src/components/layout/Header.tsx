@@ -19,7 +19,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white border-b border-b-gray-300 md:border-b-black md:border-b-[5px] md:border-double md:max-w-[1280px] md:mx-auto py-2 px-6 flex items-center justify-between">
       {/* Logo */}
-      <Link href="/" className="py-4 pr-4">
+      <Link href="/" className="py-4 pr-4 md:-ml-2">
         <Image
           src="/logo.png"
           alt="Journal of Academic Inquiry"

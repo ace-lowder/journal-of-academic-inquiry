@@ -13,7 +13,6 @@ const FeaturedArticle: React.FC = () => {
   return (
     <Link href={article.link} passHref>
       <div className="mx-4 md:m-0 flex flex-col md:flex-row md:flex-row-reverse md:h-[400px] bg-indigo-900 text-white cursor-pointer max-w-[1280px] mx-auto overflow-hidden">
-        {/* Image Section */}
         <div className="w-full md:w-[60%] h-[200px] md:h-full relative">
           <Image
             src={article.imageUrl}
@@ -25,7 +24,6 @@ const FeaturedArticle: React.FC = () => {
           />
         </div>
 
-        {/* Text Section */}
         <div className="w-full md:w-[40%] p-8 h-auto">
           <h2 className="text-4xl md:text-6xl font-serif font-bold underline">
             {article.title}
