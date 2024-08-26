@@ -1,5 +1,3 @@
-import React from "react";
-
 const Submit: React.FC = () => {
   return (
     <div>

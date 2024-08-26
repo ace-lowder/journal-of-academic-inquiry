@@ -1,5 +1,3 @@
-import React from "react";
-
 const Coaching: React.FC = () => {
   return (
     <div>

@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES6", // Use ES6 to support modern features while being broadly compatible
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // Include necessary libraries
+    "module": "ESNext", // ESNext is fine for modern JS modules
     "skipLibCheck": true,
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    /* Module Resolution */
+    "moduleResolution": "node", // Use Node.js style module resolution
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
-    "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
 
