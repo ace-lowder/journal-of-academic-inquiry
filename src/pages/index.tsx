@@ -93,7 +93,7 @@ const Home: React.FC = () => (
     </div>
 
     {/* Affiliations */}
-    <div className="w-screen -ml-8 md:ml-0 h-40 py-4 bg-gray-100 flex flex-col gap-2">
+    <div className="full-width h-40 py-4 bg-gray-100 flex flex-col gap-2">
       <h1 className="text-center">Affiliations</h1>
       <div className="grow flex items-center justify-evenly">
         <p>USC</p>
