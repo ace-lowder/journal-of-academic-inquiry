@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  @apply text-xl;
+  @apply font-serif;
+  @apply font-bold;
+}
+
+a {
+  @apply cursor-pointer;
+  @apply hover:underline;
+}
+
+ul {
+  @apply list-disc;
+  @apply pl-5;
+}
+
+.primary-button {
+  @apply bg-black;
+  @apply text-white;
+  @apply border-2;
+  @apply border-black;
+  @apply font-serif;
+  @apply font-semibold;
+  @apply px-4;
+  @apply py-2;
+  @apply hover:bg-white;
+  @apply hover:text-black;
+}
+
+.page {
+  @apply w-full;
+  @apply h-full;
+  @apply flex;
+  @apply flex-col;
+  @apply py-8;
+  @apply gap-8;
+  @apply px-8;
+  @apply md:px-0;
+}
+
+.container {
+  @apply max-w-[1280px];
+  @apply mx-auto;
+  @apply px-4;
+  @apply md:px-0;
+}
+
+.section {
+  @apply flex;
+  @apply flex-col;
+  @apply md:flex-row;
+  @apply w-full;
+}
+
+.box {
+  @apply border;
+  @apply border-gray-500;
+  @apply flex;
+  @apply flex-col;
+  @apply p-4;
+  @apply gap-2;
+  @apply text-sm;
+}
