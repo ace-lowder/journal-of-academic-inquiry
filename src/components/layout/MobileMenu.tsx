@@ -51,30 +51,27 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
   };
 
   return (
-    <nav className="fixed inset-0 bg-white z-50 flex flex-col border border-black">
+    <nav className="fixed inset-0 bg-white z-50 flex flex-col border border-black text-black">
       {/* Close Button */}
       <button
         onClick={closeMenu}
-        className="absolute top-4 right-4 text-gray-700 focus:outline-none p-2"
+        className="absolute top-4 right-4 focus:outline-none p-2"
       >
         <MdClose size={24} />
       </button>
 
-      <ul className="mt-16 w-full px-4">
+      <ul className="mt-16 w-full px-4 list-none">
         {menuItems.map(({ text, href, subItems }) => (
           <li key={text}>
             <div className="flex justify-between items-center cursor-pointer border-b border-gray-300 ">
               <Link href={href} passHref className="w-full">
-                <div
-                  onClick={closeMenu}
-                  className="text-gray-700 w-full pl-4 py-8"
-                >
+                <div onClick={closeMenu} className="w-full pl-4 py-8">
                   {text}
                 </div>
               </Link>
               {subItems && (
                 <button
-                  className="text-gray-700 focus:outline-none py-9"
+                  className="focus:outline-none py-9"
                   onClick={() => handleDropdownToggle(text)}
                 >
                   <FaChevronDown className="text-sm text-gray-500 ml-12 mr-6" />
@@ -82,13 +79,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
               )}
             </div>
             {subItems && openDropdown === text && (
-              <ul>
+              <ul className="list-none">
                 {subItems.map(({ text, href }) => (
                   <li key={text} className="w-full">
                     <Link href={href} passHref>
                       <div
                         onClick={closeMenu}
-                        className="px-6 py-8 text-center text-gray-700 border-b border-gray-300"
+                        className="px-6 py-8 text-center border-b border-gray-300"
                       >
                         {text}
                       </div>

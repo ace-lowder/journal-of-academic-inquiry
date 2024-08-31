@@ -27,6 +27,7 @@ ul {
   @apply font-semibold;
   @apply px-4;
   @apply py-2;
+  @apply mt-2;
   @apply hover:bg-white;
   @apply hover:text-black;
 }
@@ -45,12 +46,21 @@ ul {
 .container {
   @apply max-w-[1280px];
   @apply mx-auto;
+  @apply flex;
+  @apply flex-col;
+  @apply gap-8;
 }
 
 .full-width {
   @apply w-screen;
   @apply -ml-8;
   @apply lg:ml-0;
+  @apply py-8;
+  @apply bg-gray-100;
+  @apply min-h-48;
+  @apply flex;
+  @apply flex-col;
+  @apply gap-2;
 }
 
 .section {
@@ -58,6 +68,8 @@ ul {
   @apply flex-col;
   @apply md:flex-row;
   @apply w-full;
+  @apply gap-4;
+  @apply lg:gap-8;
 }
 
 .box {

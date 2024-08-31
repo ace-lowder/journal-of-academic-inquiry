@@ -2,5 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/services/coaching": "pages/services/coaching.js",
+  "/contact": "pages/contact.js",
+  "/about": "pages/about.js",
+  "/": "pages/index.js",
+  "/services": "pages/services.js"
 }

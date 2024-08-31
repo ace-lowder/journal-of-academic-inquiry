@@ -4,7 +4,7 @@ const Home: React.FC = () => (
   <div className="page">
     <div className="container">
       {/* Hero */}
-      <div className="section gap-4 md:flex-wrap lg:gap-8">
+      <div className="section md:flex-wrap">
         <div className="box w-full md:grow md:w-1/3 lg:w-[30%] justify-between">
           <div className="space-y-2">
             <h1>Welcome</h1>
@@ -37,15 +37,15 @@ const Home: React.FC = () => (
           </p>
         </div>
         <div className="box w-full md:grow md:w-1/3 lg:w-1/3 lg:grow relative">
+          <h1 className="w-full text-center">Featured Article</h1>
           <Image
-            src="/issue-cover.png"
+            src="/article.png"
             alt="Issue Cover"
             layout="responsive"
             width={8.5}
             height={11}
-            className="border mb-4"
+            className="border"
           />
-          <button className="primary-button">Subscribe</button>
         </div>
         <div className="flex flex-col gap-4 w-full lg:w-[30%]">
           <div className="grow box w-full flex flex-col justify-between">
@@ -57,8 +57,8 @@ const Home: React.FC = () => (
                   perspectives on history, philosophy, and culture.
                 </li>
                 <li>
-                  Health Sciences: Read the latest findings in medicine, public
-                  health, and biomedical research.
+                  <b>Health Sciences:</b> Read the latest findings in medicine,
+                  public health, and biomedical research.
                 </li>
                 <li>
                   <b>STEM:</b> Dive into innovations in science, technology,
@@ -93,26 +93,39 @@ const Home: React.FC = () => (
     </div>
 
     {/* Affiliations */}
-    <div className="full-width h-40 py-4 bg-gray-100 flex flex-col gap-2">
+    <div className="full-width">
       <h1 className="text-center">Affiliations</h1>
-      <div className="grow flex items-center justify-evenly">
-        <p>USC</p>
-        <p>Princeton</p>
-        <p>UCLA</p>
-        <p>Wharton</p>
-        <p>UCI</p>
-        <p>Stanford</p>
-        <p>Harvard</p>
-        <p>MIT</p>
+      <div className="grow flex items-center justify-evenly select-none">
+        <p>USC Logo</p>
+        <p>Princeton Logo</p>
+        <p>UCLA Logo</p>
+        <p>Wharton Logo</p>
+        <p>UCI Logo</p>
+        <p>Stanford Logo</p>
+        <p>Harvard Logo</p>
+        <p>MIT Logo</p>
       </div>
     </div>
 
-    {/* Blank */}
-    <div className="container box h-48">
-      <h1>Featured Articles</h1>
-      <h1>Testimonials</h1>
-      <h1>Past Issues</h1>
-      <h1>Coaching</h1>
+    {/* Coaching */}
+    <div className="container">
+      <div className="section">
+        <div className="box">
+          <h1>Coaching</h1>
+          <p>
+            Our tailored coaching program is designed to guide students through
+            the process of writing a comprehensive academic paper over a span of
+            five weeks. This intensive program provides personalized support and
+            expert guidance, ensuring that each participant develops the skills
+            necessary to produce high-quality research that meets the rigorous
+            standards of the Journal of Academic Inquiry. From selecting a
+            compelling topic to conducting thorough research and refining the
+            final draft, our coaches are committed to helping students achieve
+            academic excellence and gain confidence in their scholarly writing
+            abilities.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 );
