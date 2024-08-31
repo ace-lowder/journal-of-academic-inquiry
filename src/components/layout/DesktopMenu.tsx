@@ -60,7 +60,7 @@ const DesktopMenu: React.FC = () => {
   return (
     <nav className="hidden md:flex space-x-8 items-center relative">
       <Link href="/" passHref>
-        <div className="text-gray-700 hover:text-black">Home</div>
+        <div className=" hover:text-gray-700">Home</div>
       </Link>
 
       {menuItems.map(({ text, href, subItems }) => (
@@ -71,7 +71,7 @@ const DesktopMenu: React.FC = () => {
           onMouseLeave={subItems ? handleMouseLeave : undefined}
         >
           <Link href={href} passHref>
-            <div className="text-gray-700 hover:text-black cursor-pointer flex items-center">
+            <div className=" hover:text-gray-700 cursor-pointer flex items-center">
               {text}
               {subItems && <FaChevronDown className="ml-2 text-xs" />}
             </div>
@@ -80,9 +80,7 @@ const DesktopMenu: React.FC = () => {
             <div className="absolute top-full -left-4 w-48 mt-[35px] bg-white border border-t-0 border-gray-300 z-10">
               {subItems.map(({ text, href }) => (
                 <Link key={text} href={href} passHref>
-                  <div className="px-4 py-2 hover:bg-gray-100 text-gray-700">
-                    {text}
-                  </div>
+                  <div className="px-4 py-2 hover:bg-gray-100 ">{text}</div>
                 </Link>
               ))}
             </div>
