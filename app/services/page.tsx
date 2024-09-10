@@ -54,13 +54,14 @@ export default function Services() {
               Our Online Review service offers comprehensive feedback on
               academic papers, providing authors with detailed critiques and
               suggestions for improvement. Each submission is reviewed by a
-              panel of experienced academics who assess the paper's originality,
-              argumentation, methodology, and adherence to scholarly standards.
-              This service is designed for researchers who are preparing to
-              submit their work to academic journals or conferences and wish to
-              ensure that their papers are polished, impactful, and ready for
-              publication. The Online Review service is a valuable resource for
-              anyone looking to elevate the quality of their academic writing.
+              panel of experienced academics who assess the paper&apos;s
+              originality, argumentation, methodology, and adherence to
+              scholarly standards. This service is designed for researchers who
+              are preparing to submit their work to academic journals or
+              conferences and wish to ensure that their papers are polished,
+              impactful, and ready for publication. The Online Review service is
+              a valuable resource for anyone looking to elevate the quality of
+              their academic writing.
             </p>
             <button
               className="primary-button"
