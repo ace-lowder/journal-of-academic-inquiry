@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  Journal of Academic Inquiry
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="/readme/header.png" width="1280" alt="Project Banner">
 
-Currently, two official plugins are available:
+<div align="center">
+  <a href="https://react.dev/"><img src="/readme/icons/react.png" width="48" height="48" alt="React">&nbsp;
+  <a href="https://www.typescriptlang.org/"><img src="/readme/icons/typescript.png" width="48" height="48" alt="Typescript">&nbsp;
+  <a href="https://nextjs.org/"><img src="/readme/icons/next.png" width="48" height="48" alt="Next">&nbsp;
+  <a href="https://tailwindcss.com/"><img src="/readme/icons/tailwind.png" width="48" height="48" alt="Tailwind">&nbsp;
+  <a href="https://www.figma.com/"><img src="/readme/icons/figma.png" width="48" height="48" alt="Figma">&nbsp;
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+<p>This project is a custom-built website for a client in the academic publishing space. The Journal of Academic Inquiry is a platform that highlights scholarly research across various disciplines. My role involves full-stack development using modern technologies like React, TypeScript, Next.js, and Tailwind CSS, alongside design work in Figma.</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<p>Due to the nature of this client project, I have omitted a link to the development site to maintain the client's privacy. However, the codebase and structure reflect the work in progress, and I will continue to update this repository with more details as development progresses.</p>
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+<br><br><br><img src="/readme/footer.png" width="1280" alt="Footer Image">
