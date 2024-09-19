@@ -10,7 +10,7 @@ h1 {
 
 h2 {
   @apply text-base;
-  @apply font-bold;
+  @apply font-semibold;
 }
 
 a {

@@ -118,7 +118,10 @@ export default function Subscribe() {
           <h1 className="text-center">Testimonials</h1>
           <div className="section flex-wrap items-stretch">
             <div className="box w-full md:grow md:w-1/4">
-              <h1>Jessica Lee, High School Senior, Future STEM Major</h1>
+              <h1 className="-mb-1 text-center">Jessica L</h1>
+              <h2 className="text-xs mb-2 text-center">
+                High School Senior, Future STEM Major
+              </h2>
               <p>
                 As someone just starting out in academic research, the Journal
                 of Academic Inquiry has been an eye-opener for me. It&apos;s
@@ -130,7 +133,10 @@ export default function Subscribe() {
               </p>
             </div>
             <div className="box w-full md:grow md:w-1/4">
-              <h1>Tom Alvarez, High School Junior, Aspiring Historian</h1>
+              <h1 className="-mb-1 text-center">Tom A</h1>
+              <h2 className="text-xs mb-2 text-center">
+                High School Junior, Aspiring Historian
+              </h2>
               <p>
                 The Journal of Academic Inquiry has inspired me to dive deeper
                 into my love for history. Reading the published articles from
@@ -141,9 +147,10 @@ export default function Subscribe() {
               </p>
             </div>
             <div className="box w-full md:grow md:w-1/4">
-              <h1>
-                Emily Johnson, Recent Graduate, First-Year College Student
-              </h1>
+              <h1 className="-mb-1 text-center">Emily J</h1>
+              <h2 className="text-xs mb-2 text-center">
+                First-Year, Aspiring Historian
+              </h2>
               <p>
                 I&apos;ve always been interested in academic writing, but it
                 wasn&apos;t until I subscribed to the Journal of Academic
@@ -158,53 +165,59 @@ export default function Subscribe() {
         </div>
       </div>
 
-      {/* FAQ */}
       <div className="container">
+        {/* FAQ */}
         <div className="section">
           <div className="box w-full">
             <h1>Frequently Asked Questions</h1>
+            <b>What do I get with my subscription?</b>
             <ul>
-              <li className="font-bold">What do I get with my subscription?</li>
-              <p className="ml-4 mb-4">
+              <li>
                 With your subscription, you gain access to the latest issue of
                 the Journal of Academic Inquiry, as well as our full archive of
                 past publications. This includes research papers, project
                 highlights, and more—all created by emerging researchers.
-              </p>
-              <li className="font-bold">
-                Can I cancel my subscription at any time?
               </li>
-              <p className="ml-4 mb-4">
+            </ul>
+            <b>Can I cancel my subscription at any time? </b>
+            <ul>
+              <li>
                 Yes, you can cancel at any time. Once canceled, you will lose
                 immediate access to both current and past issues. If you wish to
                 rejoin, you can simply subscribe again and regain access to the
                 content.
-              </p>
-              <li className="font-bold">
-                Are there discounts for institutions or students?
               </li>
-              <p className="ml-4 mb-4">
+            </ul>
+
+            <b>Are there discounts for institutions or students? </b>
+            <ul>
+              <li>
                 Yes, we offer discounted rates for academic institutions, as
                 well as for high school students who submit their research for
                 publication. Contact us for more information on how to access
                 these discounts.
-              </p>
-              <li className="font-bold">How often are new issues published?</li>
-              <p className="ml-4 mb-4">
+              </li>
+            </ul>
+            <b>How often are new issues published?</b>
+            <ul>
+              <li>
                 The Journal of Academic Inquiry is published quarterly. You will
                 receive four issues per year, each filled with a variety of
                 student research and academic projects across disciplines.
-              </p>
+              </li>
             </ul>
           </div>
         </div>
+
         {/* Contact Us */}
         <div className="section">
-          <div className="box mx-auto w-full md:max-w-96 text-center">
+          <div className="box w-full sm:w-auto mx-auto">
             <h1>Still have questions?</h1>
-            <button className="secondary-button w-32 mx-auto">
-              Contact Us
-            </button>
+            <p>
+              Have more questions or ready to subscribe? Contact us today to
+              learn more about how to make the most of your subscription.
+            </p>
+            <button className="secondary-button">Contact Us</button>
           </div>
         </div>
       </div>

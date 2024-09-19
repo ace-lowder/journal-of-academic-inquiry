@@ -17,7 +17,7 @@ const DesktopMenu = () => {
       href: "/services",
       subItems: [
         { text: "Coaching", href: "/services/coaching" },
-        { text: "Online Review", href: "/services" },
+        { text: "Online Review", href: "/services/review" },
       ],
     },
     {

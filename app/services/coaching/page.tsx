@@ -1,19 +1,25 @@
 export default function Coaching() {
   return (
     <div className="page">
-      <div className="container">
-        {/* Call to Action */}
+      {/* Call to Action */}
+      <div className="full-width px-8 lg:px-0 text-center items-center">
         <div className="section">
-          <div className="box md:w-1/2 mx-auto">
-            <h1>Personalized Coaching for Academic Success</h1>
+          <div className="box md:w-1/2 md:min-w-[500px] mx-auto text-center">
+            <h1 className="-mb-2">
+              Personalized Coaching for Academic Success
+            </h1>
+            <h2>$180 / hr</h2>
             <p>
-              Transform your research into a high-quality academic paper in just
-              five weeks.
+              Looking to refine your research skills? Our personalized coaching
+              program will guide you through the process. Transform your
+              research into a high-quality academic paper in just five weeks.
             </p>
             <button className="primary-button">Enroll Now</button>
           </div>
         </div>
+      </div>
 
+      <div className="container">
         {/* Program Overview */}
         <div className="section">
           <div className="box">
@@ -44,30 +50,48 @@ export default function Coaching() {
           <h1>How It Works</h1>
           <div className="section sm:flex-row sm:flex-wrap">
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 1: Initial Consultation</h1>
+              <h1>Step 1: Paper Topic & Thesis (Week 1)</h1>
               <p>
-                A 30-minute session to understand your research goals and needs.
+                In the first week, we&apos;ll help you refine your research
+                topic and develop a strong, clear thesis statement that will
+                guide your paper. This session sets the foundation for the
+                entire writing process.
               </p>
             </div>
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 2: Research Planning</h1>
+              <h1>Step 2: Research & Outline (Week 2)</h1>
               <p>
-                Guidance on choosing a compelling topic and outlining your
-                paper.
+                During week two, we focus on gathering and organizing your
+                research. Together, we&apos;ll create a detailed outline that
+                serves as a roadmap for your paper, ensuring your arguments are
+                well-structured and supported.
               </p>
             </div>
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 3: Writing and Feedback</h1>
+              <h1>Step 3: Drafting the Paper (Week 3)</h1>
               <p>
-                Weekly sessions to review drafts, provide feedback, and address
-                challenges.
+                In the third week, you&apos;ll begin drafting the main sections
+                of your paper. We&apos;ll meet to review your progress and
+                provide feedback on your introduction, body paragraphs, and
+                conclusions, helping you stay on track.
               </p>
             </div>
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 4: Final Review</h1>
+              <h1>Step 4: Feedback & Revision (Week 4)</h1>
               <p>
-                Detailed review and polishing of your final draft to ensure it
-                meets academic standards.
+                Week four is dedicated to revising your paper based on detailed
+                feedback. We&apos;ll focus on improving clarity, strengthening
+                arguments, and refining the structure to meet academic
+                standards.
+              </p>
+            </div>
+            <div className="box w-full sm:grow sm:w-[40%]">
+              <h1>Step 5: Final Review & Polishing (Week 5)</h1>
+              <p>
+                In the final week, we&apos;ll perform a comprehensive review of
+                your paper, fine-tuning grammar, formatting, and style. By the
+                end of the session, your paper will be polished and ready for
+                submission.
               </p>
             </div>
           </div>
@@ -75,29 +99,42 @@ export default function Coaching() {
       </div>
 
       {/* Testimonials */}
-      <div className="full-width px-8">
-        <div className="container">
-          <h1 className="w-full text-center">Testimonials</h1>
-          <div className="section">
-            <div className="box">
-              <h1>Name</h1>
+      <div className="full-width">
+        <div className="container px-8 lg:px-0">
+          <h1 className="text-center">Testimonials</h1>
+          <div className="section flex-wrap items-stretch">
+            <div className="box w-full md:grow md:w-1/4">
+              <h1 className="-mb-1 text-center">Amanda R</h1>
+              <h2 className="text-xs mb-2 text-center">High School Senior</h2>
               <p>
-                This is a placeholder testimonial review, where successful
-                students will write about their experience with the program.
+                The coaching program was exactly what I needed to take my paper
+                from good to great. The weekly sessions kept me motivated, and
+                the feedback was incredibly helpful. I felt so much more
+                confident in my research by the end!
               </p>
             </div>
-            <div className="box">
-              <h1>Name</h1>
+            <div className="box w-full md:grow md:w-1/4">
+              <h1 className="-mb-1 text-center">Jordan S</h1>
+              <h2 className="text-xs mb-2 text-center">
+                First-Year College Student
+              </h2>
               <p>
-                This is a placeholder testimonial review, where successful
-                students will write about their experience with the program.
+                This program helped me break down the overwhelming task of
+                writing an academic paper. Each week, I felt like I was making
+                solid progress, and my coach was so supportive. Highly recommend
+                it to anyone serious about improving their writing!
               </p>
             </div>
-            <div className="box">
-              <h1>Name</h1>
+            <div className="box w-full md:grow md:w-1/4">
+              <h1 className="-mb-1 text-center">Emily L</h1>
+              <h2 className="text-xs mb-2 text-center">
+                First-Year, Aspiring Historian
+              </h2>
               <p>
-                This is a placeholder testimonial review, where successful
-                students will write about their experience with the program.
+                I was really nervous about writing my first major research
+                paper, but the coaching program gave me all the tools I needed
+                to succeed. The step-by-step guidance and personalized feedback
+                were game-changers for me.
               </p>
             </div>
           </div>
@@ -105,7 +142,7 @@ export default function Coaching() {
       </div>
 
       <div className="container">
-        {/* FAQs */}
+        {/* FAQ */}
         <div className="section">
           <div className="box">
             <h1>Frequently Asked Questions</h1>
@@ -136,10 +173,10 @@ export default function Coaching() {
             <ul>
               <li>
                 We understand that research and writing can be challenging and
-                that each participant’s pace may vary. If you need more time to
-                complete your paper, we offer the option to extend the coaching
-                period at an additional cost. Our goal is to support you in
-                producing the best possible work, and we are committed to
+                that each participant&apos;s pace may vary. If you need more
+                time to complete your paper, we offer the option to extend the
+                coaching period at an additional cost. Our goal is to support
+                you in producing the best possible work, and we are committed to
                 accommodating your needs.
               </li>
             </ul>
@@ -157,6 +194,8 @@ export default function Coaching() {
             </ul>
           </div>
         </div>
+
+        {/* Contact Us */}
         <div className="section">
           <div className="box w-full sm:w-auto mx-auto">
             <h1>Still have questions?</h1>
@@ -164,7 +203,7 @@ export default function Coaching() {
               Have more questions or ready to enroll? Contact us today to learn
               more about how we can help you achieve your academic goals.
             </p>
-            <button className="primary-button">Contact Us</button>
+            <button className="secondary-button">Contact Us</button>
           </div>
         </div>
       </div>
