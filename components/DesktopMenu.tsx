@@ -10,10 +10,7 @@ const DesktopMenu = () => {
     {
       text: "About",
       href: "/about",
-      subItems: [
-        { text: "Mission Statement", href: "/about" },
-        { text: "Focus Areas", href: "/about" },
-      ],
+      subItems: [{ text: "Latest Issue", href: "/subscribe" }],
     },
     {
       text: "Services",

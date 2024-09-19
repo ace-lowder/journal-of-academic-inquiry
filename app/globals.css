@@ -32,6 +32,20 @@ ul {
   @apply hover:text-black;
 }
 
+.secondary-button {
+  @apply bg-white;
+  @apply text-black;
+  @apply border-2;
+  @apply border-black;
+  @apply font-serif;
+  @apply font-semibold;
+  @apply px-4;
+  @apply py-2;
+  @apply mt-2;
+  @apply hover:bg-black;
+  @apply hover:text-white;
+}
+
 .page {
   @apply w-full;
   @apply h-full;
