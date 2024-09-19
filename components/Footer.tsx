@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <div className="container h-full flex flex-col gap-12 border-t-4 border-double border-gray-600 py-8">
@@ -25,7 +27,9 @@ const Footer = () => {
             <a href="/submit">How To</a>
           </div>
         </div>
-        <div className="box w-full md:w-1/2"></div>
+        <div className="w-full md:w-1/2 relative">
+          <Image src="/logo.png" alt="JAI Logo" fill objectFit="contain" />
+        </div>
       </div>
       <div className="flex flex-col gap-2 justify-center">
         <span className="text-center text-xs">

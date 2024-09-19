@@ -81,3 +81,16 @@ ul {
   @apply gap-2;
   @apply text-sm;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 500px));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 200s linear infinite;
+}

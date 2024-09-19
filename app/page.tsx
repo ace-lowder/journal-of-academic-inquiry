@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -40,11 +43,12 @@ export default function Home() {
           <div className="box w-full md:grow md:w-1/3 lg:w-1/3 lg:grow relative">
             <h1 className="w-full text-center">Featured Article</h1>
             <Image
-              src="/images/article.png"
+              src="/article.png"
               alt="Issue Cover"
               width={850}
               height={1100}
-              className="border w-full h-auto"
+              className="border w-full h-auto hover:brightness-95 hover:cursor-pointer"
+              onClick={() => window.open("/test_paper.pdf", "_blank")}
             />
           </div>
           <div className="flex flex-col gap-4 w-full lg:w-[30%]">
@@ -80,31 +84,172 @@ export default function Home() {
               </div>
               <a className="w-full text-center">Read More</a>
             </div>
-            <div className="box w-full items-center text-center justify-center px-12">
+            <div className="box w-full md:w-1/2 md:mx-auto lg:w-full lg:mx-0 items-center text-center justify-center px-12">
               <h1>Submit a Paper</h1>
               <p className="mb-4">
-                We are currently accepting submissions for our upcoming issues.
-                Share your research and contribute to the global academic
+                We are currently accepting submissions for our upcoming Spring
+                issue. Share your research and contribute to the global academic
                 community. Learn more about submission requirements and
                 deadlines.
               </p>
+              <Link href="/submit">
+                <button className="primary-button">Learn More</button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Affiliations */}
-      <div className="full-width">
-        <h1 className="text-center">Affiliations</h1>
-        <div className="grow flex items-center justify-evenly select-none">
-          <p>USC Logo</p>
-          <p>Princeton Logo</p>
-          <p>UCLA Logo</p>
-          <p>Wharton Logo</p>
-          <p>UCI Logo</p>
-          <p>Stanford Logo</p>
-          <p>Harvard Logo</p>
-          <p>MIT Logo</p>
+      <div className="full-width py-6">
+        <h1 className="text-center mb-6">Affiliations</h1>
+        <div className="flex gap-[1990px] animate-scroll">
+          <div className="flex gap-12">
+            <Image
+              src="/affiliations/austin.png"
+              alt="UT Austin Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/harvard.png"
+              alt="Harvard Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/mit.png"
+              alt="MIT Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/northeastern.png"
+              alt="Northeastern Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/princeton.png"
+              alt="Princeton Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/stanford.png"
+              alt="Stanford Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/uci.png"
+              alt="UCI Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/ucla.png"
+              alt="UCLA Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/usc.png"
+              alt="USC Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/wharton.png"
+              alt="Wharton Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+          </div>
+
+          {/* Duplicate the logos for continuous scrolling */}
+          <div className="flex gap-12">
+            <Image
+              src="/affiliations/austin.png"
+              alt="UT Austin Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/harvard.png"
+              alt="Harvard Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/mit.png"
+              alt="MIT Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/northeastern.png"
+              alt="Northeastern Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/princeton.png"
+              alt="Princeton Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/stanford.png"
+              alt="Stanford Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/uci.png"
+              alt="UCI Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/ucla.png"
+              alt="UCLA Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/usc.png"
+              alt="USC Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <Image
+              src="/affiliations/wharton.png"
+              alt="Wharton Logo"
+              width={200}
+              height={200}
+              className="w-auto h-12 filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+          </div>
         </div>
       </div>
 
