@@ -1,12 +1,10 @@
-import Image from "next/image";
-
 export default function About() {
   return (
     <div className="page">
-      <div className="container">
+      <div className="container md:gap-4 lg:gap-8">
         {/* About */}
-        <div className="section flex-col-reverse">
-          <div className="box w-full md:grow md:w-1/2">
+        <div className="section flex-wrap">
+          <div className="box w-full md:grow">
             <h1>About Us</h1>
             <p>
               Welcome to the Journal of Academic Inquiry, a premier platform
@@ -18,7 +16,9 @@ export default function About() {
               contributing to the collective knowledge across various fields of
               study.
             </p>
-            <h1 className="mt-4">Mission Statement</h1>
+          </div>
+          <div className="box w-full md:grow md:w-1/4">
+            <h1>Mission Statement</h1>
             <p>
               At the Journal of Academic Inquiry, our mission is to foster a
               culture of academic excellence and innovation. We are committed to
@@ -29,19 +29,7 @@ export default function About() {
               publications are of exceptional quality and significance.
             </p>
           </div>
-          <div className="relative w-full md:grow md:w-1/3 min-h-48 md:min-h-0">
-            <Image
-              fill
-              src="/library.png"
-              objectFit="cover"
-              alt="Reading at Library"
-            />
-          </div>
-        </div>
-
-        {/* Focus Areas */}
-        <div className="section">
-          <div className="box w-full">
+          <div className="box w-full md:grow md:w-1/2">
             <h1>Focus Areas</h1>
             <p>
               We take pride in the diverse range of disciplines we cover,

@@ -82,7 +82,9 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <a className="w-full text-center">Read More</a>
+              <Link href="/about" className="w-full text-center">
+                Read More
+              </Link>
             </div>
             <div className="box w-full md:w-1/2 md:mx-auto lg:w-full lg:mx-0 items-center text-center justify-center px-12">
               <h1>Submit a Paper</h1>

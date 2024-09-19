@@ -9,8 +9,8 @@ const Footer = () => {
             <a href="/about" className="font-semibold">
               ABOUT
             </a>
+            <a href="/about">Latest Issue</a>
             <a href="/about">Mission</a>
-            <a href="/about">Focus</a>
           </div>
           <div className="grow flex flex-col gap-1.5">
             <a href="/services" className="font-semibold">
