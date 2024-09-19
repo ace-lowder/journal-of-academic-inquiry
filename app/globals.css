@@ -8,6 +8,11 @@ h1 {
   @apply font-bold;
 }
 
+h2 {
+  @apply text-base;
+  @apply font-bold;
+}
+
 a {
   @apply cursor-pointer;
   @apply hover:underline;

@@ -6,7 +6,7 @@ export default function Subscribe() {
       {/* Subscribe */}
       <div className="full-width px-8 lg:px-0 text-center items-center">
         <div className="container">
-          <div className="section items-center justify-center">
+          <div className="section items-center justify-center md:gap-12">
             <Image
               src="/article.png"
               alt="Latest Issue"

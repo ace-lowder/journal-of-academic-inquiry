@@ -28,7 +28,8 @@ export default function Services() {
         {/* Coaching and Review */}
         <div className="section">
           <div className="box">
-            <h1>Coaching</h1>
+            <h1 className="text-center -mb-2">Coaching</h1>
+            <h2 className="text-center">$180 / hr</h2>
             <p>
               Our personalized coaching program is tailored to help students and
               early-career researchers develop the skills necessary to produce
@@ -49,7 +50,8 @@ export default function Services() {
             </button>
           </div>
           <div className="box">
-            <h1>Online Review</h1>
+            <h1 className="text-center -mb-2">Online Review</h1>
+            <h2 className="text-center">$100</h2>
             <p>
               Our Online Review service offers comprehensive feedback on
               academic papers, providing authors with detailed critiques and
