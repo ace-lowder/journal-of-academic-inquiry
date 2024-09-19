@@ -101,7 +101,7 @@ export default function Home() {
       </div>
 
       {/* Affiliations */}
-      <div className="full-width py-6">
+      <div className="full-width py-6 overflow-hidden">
         <h1 className="text-center mb-6">Affiliations</h1>
         <div className="flex gap-[1990px] animate-scroll">
           <div className="flex gap-12">
