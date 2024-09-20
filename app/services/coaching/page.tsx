@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Coaching() {
   return (
     <div className="page">
@@ -203,7 +205,9 @@ export default function Coaching() {
               Have more questions or ready to enroll? Contact us today to learn
               more about how we can help you achieve your academic goals.
             </p>
-            <button className="secondary-button">Contact Us</button>
+            <Link href="/contact">
+              <button className="secondary-button w-full">Contact Us</button>
+            </Link>
           </div>
         </div>
       </div>

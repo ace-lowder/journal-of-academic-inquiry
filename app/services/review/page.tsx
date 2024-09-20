@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Review() {
   return (
     <div className="page">
@@ -161,7 +163,9 @@ export default function Review() {
               today to learn more about how we can help you improve your
               academic writing and get your paper ready for publication.
             </p>
-            <button className="secondary-button">Contact Us</button>
+            <Link href="/contact">
+              <button className="secondary-button w-full">Contact Us</button>
+            </Link>
           </div>
         </div>
       </div>

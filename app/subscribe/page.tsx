@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Subscribe() {
   return (
@@ -217,7 +218,9 @@ export default function Subscribe() {
               Have more questions or ready to subscribe? Contact us today to
               learn more about how to make the most of your subscription.
             </p>
-            <button className="secondary-button">Contact Us</button>
+            <Link href="/contact">
+              <button className="secondary-button w-full">Contact Us</button>
+            </Link>
           </div>
         </div>
       </div>

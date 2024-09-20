@@ -44,8 +44,12 @@ export default function Contact() {
           <div className="box w-full">
             <h1>Contact Us</h1>
             <p>
-              Have questions or need further information? Fill out the form
-              below and we&apos;ll get in touch with you as soon as possible.
+              If you have any questions regarding submissions, the journal, or
+              our services, feel free to reach out to us. If you need assistance
+              with the submission process, clarification on guidelines, or
+              information about our programs, we&apos;re happy to assist. Please
+              use the form below to send us a message, and we&apos;ll get back
+              to you as soon as possible.
             </p>
           </div>
         </div>

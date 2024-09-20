@@ -25,8 +25,9 @@ const Header = () => {
         <Image
           src="/logo.png"
           alt="Journal of Academic Inquiry"
-          width={240}
-          height={48}
+          className="h-9 w-auto"
+          width={600}
+          height={200}
         />
       </Link>
 

@@ -82,8 +82,8 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <Link href="/about" className="w-full text-center">
-                Read More
+              <Link href="/about" className="w-fit text-center mx-auto">
+                <button className="secondary-button">Read More</button>
               </Link>
             </div>
             <div className="box w-full md:w-1/2 md:mx-auto lg:w-full lg:mx-0 items-center text-center justify-center px-12">
@@ -94,8 +94,8 @@ export default function Home() {
                 community. Learn more about submission requirements and
                 deadlines.
               </p>
-              <Link href="/submit">
-                <button className="primary-button">Learn More</button>
+              <Link href="/submit/requirements">
+                <button className="secondary-button">Learn More</button>
               </Link>
             </div>
           </div>
