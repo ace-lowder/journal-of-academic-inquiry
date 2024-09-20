@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: process.env.EMAIL_USER, // Sender address
       to: process.env.EMAIL_USER, // Recipient address
-      subject: `New Submission: ${title}`,
+      subject: `[Submission] ${title}`,
       text: `
         First Name: ${firstName}
         Last Name: ${lastName}

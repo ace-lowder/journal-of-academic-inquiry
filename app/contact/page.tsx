@@ -1,12 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { FaSpinner } from "react-icons/fa6";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    setIsSubmitting(true);
 
     const formData = {
       name: (document.getElementById("name") as HTMLInputElement).value,
@@ -31,6 +35,8 @@ export default function Contact() {
       }
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -130,8 +136,18 @@ export default function Contact() {
               </div>
 
               {/* Submit Button */}
-              <button type="submit" className="primary-button">
-                Send Message
+              <button
+                type="submit"
+                className="primary-button"
+                disabled={isSubmitting || isSubmitted}
+              >
+                {isSubmitting ? (
+                  <FaSpinner className="animate-spin mx-auto" size={20} />
+                ) : isSubmitted ? (
+                  "Message Sent"
+                ) : (
+                  "Send Message"
+                )}
               </button>
             </div>
           </div>

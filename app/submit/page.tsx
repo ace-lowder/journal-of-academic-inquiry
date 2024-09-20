@@ -6,6 +6,7 @@ import { FaSpinner } from "react-icons/fa6";
 
 export default function Submit() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isFailed, setIsFailed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef(null);
 
@@ -13,6 +14,7 @@ export default function Submit() {
     e.preventDefault();
 
     setIsSubmitting(true);
+    setIsFailed(false);
 
     const formData = new FormData(formRef.current!);
     const file = formData.get("file") as File;
@@ -46,16 +48,17 @@ export default function Submit() {
 
         if (response.ok) {
           console.log("Form submitted successfully");
-          if (!isSubmitted) {
-            setIsSubmitted(true);
-          }
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          setIsSubmitted(true);
+          setIsFailed(false);
         } else {
+          setIsFailed(true);
           console.error("Error submitting form:", response.statusText);
         }
       } catch (error) {
+        setIsFailed(true);
         console.error("Fetch error:", error);
       } finally {
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setIsSubmitting(false);
       }
     };
@@ -64,6 +67,7 @@ export default function Submit() {
       reader.readAsDataURL(file);
     } else {
       console.error("No file selected");
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setIsSubmitting(false);
     }
   };
@@ -81,7 +85,7 @@ export default function Submit() {
     <div className="page">
       <div className="container">
         {/* Submission Confirmation */}
-        {isSubmitted && (
+        {isSubmitted && !isFailed && (
           <div className="section bg-green-100 relative">
             <div className="box w-full">
               <h1>Submission Confirmation</h1>
@@ -93,6 +97,25 @@ export default function Submit() {
               <button
                 className="absolute !font-sans top-4 right-4 px-2 py-[2px] hover:bg-green-200"
                 onClick={() => setIsSubmitted(false)}
+              >
+                X
+              </button>
+            </div>
+          </div>
+        )}
+
+        {isFailed && (
+          <div className="section bg-red-100 relative">
+            <div className="box w-full">
+              <h1>Submission Failed</h1>
+              <p>
+                Something went wrong during submission. Please try again or
+                contact support if the issue persists.
+              </p>
+              {/* Close button */}
+              <button
+                className="absolute !font-sans top-4 right-4 px-2 py-[2px] hover:bg-red-200"
+                onClick={() => setIsFailed(false)}
               >
                 X
               </button>
@@ -266,10 +289,12 @@ export default function Submit() {
               <button
                 type="submit"
                 className="primary-button"
-                disabled={isSubmitting}
+                disabled={isSubmitting || isSubmitted}
               >
                 {isSubmitting ? (
                   <FaSpinner className="animate-spin mx-auto" size={20} />
+                ) : isSubmitted ? (
+                  "Submitted"
                 ) : (
                   "Submit"
                 )}

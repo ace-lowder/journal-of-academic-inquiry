@@ -51,6 +51,11 @@ select {
   @apply mt-2;
   @apply hover:bg-white;
   @apply hover:text-black;
+  @apply disabled:bg-gray-400;
+  @apply disabled:border-gray-400;
+  @apply disabled:hover:bg-gray-400;
+  @apply disabled:hover:text-white;
+  @apply disabled:cursor-not-allowed;
 }
 
 .secondary-button {
