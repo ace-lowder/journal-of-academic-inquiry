@@ -1,19 +1,37 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const formRef = useRef(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!isSubmitted) {
-      setIsSubmitted(true);
-    }
+    const formData = {
+      name: (document.getElementById("name") as HTMLInputElement).value,
+      email: (document.getElementById("email") as HTMLInputElement).value,
+      subject: (document.getElementById("subject") as HTMLInputElement).value,
+      message: (document.getElementById("message") as HTMLTextAreaElement)
+        .value,
+    };
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    try {
+      const response = await fetch("/api/form/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        console.error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -55,11 +73,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <form
-          className="flex flex-col gap-4 md:px-32"
-          ref={formRef}
-          onSubmit={handleSubmit}
-        >
+        <form className="flex flex-col gap-4 md:px-32" onSubmit={handleSubmit}>
           <h1 className="text-center text-3xl mt-8">Contact Form</h1>
 
           {/* Input Fields */}

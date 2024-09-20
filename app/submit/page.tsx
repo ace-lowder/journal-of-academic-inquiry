@@ -7,12 +7,58 @@ export default function Submit() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const formRef = useRef(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isSubmitted) {
-      setIsSubmitted(true);
+
+    const formData = new FormData(formRef.current!);
+    const file = formData.get("file") as File;
+    const elsewhere = formData.get("elsewhere") === "on";
+
+    const reader = new FileReader();
+
+    reader.onloadend = async () => {
+      const base64File = reader.result?.toString().split(",")[1];
+
+      const data = {
+        firstName: formData.get("first"),
+        lastName: formData.get("last"),
+        email: formData.get("email"),
+        school: formData.get("school"),
+        title: formData.get("title"),
+        subject: formData.get("subject"),
+        summary: formData.get("summary"),
+        file: base64File,
+        elsewhere,
+      };
+
+      try {
+        const response = await fetch("/api/form/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          console.log("Form submitted successfully");
+          if (!isSubmitted) {
+            setIsSubmitted(true);
+          }
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          console.error("Error submitting form:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      console.error("No file selected");
     }
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -72,20 +118,23 @@ export default function Submit() {
           onSubmit={handleSubmit}
         >
           <h1 className="text-center text-3xl mt-8 -mb-4">Submission Form</h1>
-          <div className="section">{/* File Upload */}</div>
-
           {/* Input Fields */}
           <div className="section mb-4">
             <div className="box w-full">
-              <div className="box md:w-[600px] my-4 mx-auto">
-                <h2>Attach Your Paper</h2>
-                <p>
-                  Please upload your research paper in PDF format. Ensure your
-                  file name includes your full name and the title of your paper.
-                </p>
-                <button className="secondary-button">Upload File</button>
-              </div>
               <div className="section flex-wrap lg:gap-4">
+                <div className="w-full">
+                  <label className="paper" htmlFor="first">
+                    Paper
+                  </label>
+                  <input
+                    className="w-full"
+                    type="file"
+                    name="file"
+                    id="paper"
+                    accept="pdf"
+                    required
+                  />
+                </div>
                 <div className="w-full md:w-1/3 md:grow">
                   <label className="block" htmlFor="first">
                     First Name
@@ -93,6 +142,7 @@ export default function Submit() {
                   <input
                     className="w-full"
                     id="first"
+                    name="first"
                     type="text"
                     placeholder="Jane"
                     required
@@ -105,6 +155,7 @@ export default function Submit() {
                   <input
                     className="w-full"
                     id="last"
+                    name="last"
                     type="text"
                     placeholder="Doe"
                     required
@@ -117,6 +168,7 @@ export default function Submit() {
                   <input
                     className="w-full"
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="jane@example.com"
                     required
@@ -129,6 +181,7 @@ export default function Submit() {
                   <input
                     className="w-full"
                     id="school"
+                    name="school"
                     type="text"
                     placeholder="California High School"
                   />
@@ -140,6 +193,7 @@ export default function Submit() {
                   <input
                     className="w-full"
                     id="title"
+                    name="title"
                     type="text"
                     placeholder="The Impact of Academic Research"
                     required
@@ -149,13 +203,22 @@ export default function Submit() {
                   <label className="block" htmlFor="subject">
                     Subject Area
                   </label>
-                  <input
+                  <select
                     className="w-full"
                     id="subject"
-                    type="text"
-                    placeholder="Business"
+                    name="subject"
                     required
-                  />
+                  >
+                    <option value="">Academic Focus</option>
+                    <option value="Humanities">Humanities</option>
+                    <option value="Health Sciences">Health Sciences</option>
+                    <option value="STEM">STEM</option>
+                    <option value="Business">Business</option>
+                    <option value="Law">Law</option>
+                    <option value="Visual & Performing Arts">
+                      Visual & Performing Arts
+                    </option>
+                  </select>
                 </div>
                 <div className="w-full md:grow">
                   <label className="block" htmlFor="summary">
@@ -164,6 +227,7 @@ export default function Submit() {
                   <textarea
                     className="w-full min-h-48"
                     id="summary"
+                    name="summary"
                     placeholder="Provide a short description (200 - 300 words) summarizing your research, key findings, and contributions."
                   />
                 </div>
@@ -174,7 +238,7 @@ export default function Submit() {
                   </label>
                 </div>
                 <div className="w-full md:w-1/3 md:grow flex gap-2">
-                  <input id="elsewhere" type="checkbox" />
+                  <input id="elsewhere" name="elsewhere" type="checkbox" />
                   <label htmlFor="elsewhere">
                     I have submitted this paper elsewhere
                   </label>
