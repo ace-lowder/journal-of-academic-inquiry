@@ -2,13 +2,17 @@
 
 import Link from "next/link";
 import { useState, useRef } from "react";
+import { FaSpinner } from "react-icons/fa6";
 
 export default function Submit() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    setIsSubmitting(true);
 
     const formData = new FormData(formRef.current!);
     const file = formData.get("file") as File;
@@ -51,6 +55,8 @@ export default function Submit() {
         }
       } catch (error) {
         console.error("Fetch error:", error);
+      } finally {
+        setIsSubmitting(false);
       }
     };
 
@@ -58,6 +64,7 @@ export default function Submit() {
       reader.readAsDataURL(file);
     } else {
       console.error("No file selected");
+      setIsSubmitting(false);
     }
   };
 
@@ -140,7 +147,7 @@ export default function Submit() {
                     type="file"
                     name="file"
                     id="paper"
-                    accept="pdf"
+                    accept=".pdf"
                     required
                     onChange={handleFileChange}
                   />
@@ -256,8 +263,16 @@ export default function Submit() {
               </div>
 
               {/* Submit Button */}
-              <button type="submit" className="primary-button">
-                Submit
+              <button
+                type="submit"
+                className="primary-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <FaSpinner className="animate-spin mx-auto" size={20} />
+                ) : (
+                  "Submit"
+                )}
               </button>
               <p>
                 By clicking the submit button, you confirm that your paper
