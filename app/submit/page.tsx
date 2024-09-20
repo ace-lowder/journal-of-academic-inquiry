@@ -61,6 +61,15 @@ export default function Submit() {
     }
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file && file.size > 25 * 1024 * 1024) {
+      // 25 MB limit
+      alert("File size is too large. Please upload a file smaller than 25MB.");
+      e.target.value = ""; // Clear the file input
+    }
+  };
+
   return (
     <div className="page">
       <div className="container">
@@ -133,6 +142,7 @@ export default function Submit() {
                     id="paper"
                     accept="pdf"
                     required
+                    onChange={handleFileChange}
                   />
                 </div>
                 <div className="w-full md:w-1/3 md:grow">
