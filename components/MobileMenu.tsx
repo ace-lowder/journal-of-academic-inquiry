@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { useState } from 'react';
-import { MdClose } from 'react-icons/md';
-import { FaChevronDown } from 'react-icons/fa';
+import Link from "next/link";
+import { useState } from "react";
+import { MdClose } from "react-icons/md";
+import { FaChevronDown } from "react-icons/fa";
 
 interface MobileMenuProps {
   closeMenu: () => void;
@@ -12,34 +12,28 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
 
   const menuItems = [
     {
-      text: 'Home',
-      href: '/',
+      text: "Home",
+      href: "/",
     },
     {
-      text: 'About',
-      href: '/about',
+      text: "About",
+      href: "/about",
+      subItems: [{ text: "Latest Issue", href: "/subscribe" }],
+    },
+    {
+      text: "Services",
+      href: "/services",
       subItems: [
-        { text: 'Mission Statement', href: '/about' },
-        { text: 'Focus Areas', href: '/about' },
+        { text: "Coaching", href: "/services/coaching" },
+        { text: "Online Review", href: "/services/review" },
       ],
     },
     {
-      text: 'Services',
-      href: '/services',
-      subItems: [
-        { text: 'Coaching', href: '/services/coaching' },
-        { text: 'Online Review', href: '/services' },
-      ],
+      text: "Submit",
+      href: "/submit",
+      subItems: [{ text: "Requirements", href: "/submit/requirements" }],
     },
-    {
-      text: 'Submit',
-      href: '/submit',
-      subItems: [
-        { text: 'Requirements', href: '/submit' },
-        { text: 'How to Submit', href: '/submit' },
-      ],
-    },
-    { text: 'Contact', href: '/contact' },
+    { text: "Contact", href: "/contact" },
   ];
 
   const handleDropdownToggle = (menuKey: string) => {

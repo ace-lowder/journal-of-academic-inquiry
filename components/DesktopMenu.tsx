@@ -23,10 +23,7 @@ const DesktopMenu = () => {
     {
       text: "Submit",
       href: "/submit",
-      subItems: [
-        { text: "Requirements", href: "/submit" },
-        { text: "How to Submit", href: "/submit" },
-      ],
+      subItems: [{ text: "Requirements", href: "/submit/requirements" }],
     },
     { text: "Contact", href: "/contact" },
   ];

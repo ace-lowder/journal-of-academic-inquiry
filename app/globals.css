@@ -23,6 +23,14 @@ ul {
   @apply pl-5;
 }
 
+input,
+textarea {
+  @apply border;
+  @apply border-gray-400;
+  @apply px-4;
+  @apply py-2;
+}
+
 .primary-button {
   @apply bg-black;
   @apply text-white;
