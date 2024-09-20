@@ -130,17 +130,17 @@ export default function Submit() {
             <p>
               Ready to submit your work to the Journal of Academic Inquiry? Use
               the form below to upload your research paper and provide the
-              necessary details about your submission. Before you submit, please
-              take a moment to review our{" "}
+              necessary details about your submission. Please note that while we
+              encourage all authors to submit high-quality work,{" "}
+              <b>publication is not guaranteed</b>. The Journal of Academic
+              Inquiry publishes approximately 10% of all submissions, and each
+              paper is rigorously reviewed for its academic merit, originality,
+              and adherence to our guidelines.
+            </p>
+            <p className="text-center">
+              Before you submit, please take a moment to review our{" "}
               <a href="/submit/requirements">submission requirements</a> to
               ensure your paper meets our guidelines.
-            </p>
-            <p>
-              <b>Note</b>: Only papers that adhere to our submission guidelines
-              will be considered for publication. If you need help with
-              formatting or have questions, refer to our{" "}
-              <a href="/submit/requirements">requirements page</a> for more
-              details.
             </p>
             <Link href="/submit/requirements">
               <button className="secondary-button w-full">
