@@ -93,7 +93,6 @@ select {
 .full-width {
   @apply w-screen;
   @apply -ml-8;
-  @apply lg:ml-0;
   @apply py-8;
   @apply bg-gray-100;
   @apply min-h-48;
