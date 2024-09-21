@@ -206,7 +206,8 @@ export default function CoachingForm() {
                       id="gpa"
                       name="gpa"
                       type="number"
-                      placeholder="The Impact of Academic Research"
+                      step=".01"
+                      placeholder="4.0"
                       required
                     />
                   </div>

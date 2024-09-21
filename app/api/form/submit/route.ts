@@ -54,17 +54,9 @@ export async function POST(req: NextRequest) {
       from: process.env.EMAIL_USER, // Sender address
       to: process.env.EMAIL_USER, // Recipient address
       subject: `[Submission] ${title}`,
-      text: `
-        First Name: ${firstName}
-        Last Name: ${lastName}
-        Email: ${email}
-        School: ${school}
-        
-        Title: ${title}
-        Subject: ${subject}
-        Submitted elsewhere: ${elsewhere ? "Yes" : "No"}
-        
-        ${summary}
+      text: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nSchool: ${school}\n\nTitle: ${title}\nSubject: ${subject}\nSubmitted elsewhere: ${
+        elsewhere ? "Yes" : "No"
+      }\n\nSummary: ${summary}
       `,
       attachments: [
         {

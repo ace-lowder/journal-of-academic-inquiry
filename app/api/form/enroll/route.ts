@@ -49,22 +49,11 @@ export async function POST(req: NextRequest) {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: `[Coaching] ${firstName} ${lastName}`,
-      text: `
-        First Name: ${firstName}
-        Last Name: ${lastName}
-        Email: ${email}
-        School: ${school}
-        GPA: ${gpa}
-        Subject: ${subject}
-        Written a research paper before: ${written ? "Yes" : "No"}
-        Published before: ${published ? "Yes" : "No"}
-        
-        [Why]
-        ${why}
-        
-        [Notes]
-        ${notes}
-      `,
+      text: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nSchool: ${school}\nGPA: ${gpa}\nSubject: ${subject}\nWritten a research paper before: ${
+        written ? "Yes" : "No"
+      }\nPublished before: ${
+        published ? "Yes" : "No"
+      }\n\nWhy; ${why}\n\nNotes: ${notes ? notes : "N/A"}`,
     };
 
     const info = await transporter.sendMail(mailOptions);
