@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaSpinner } from "react-icons/fa6";
 
 export default function Submit() {
@@ -80,6 +80,38 @@ export default function Submit() {
       e.target.value = ""; // Clear the file input
     }
   };
+
+  useEffect(() => {
+    if (isSubmitted && !isFailed) {
+      const sendConfirmationEmail = async () => {
+        const formData = new FormData(formRef.current!);
+        const confirmationData = {
+          from: `"Coaching Team" <coaching@journalofinquiry.org>`,
+          to: formData.get("email"),
+          subject: "Coaching Service - Enrollment Confirmation",
+          name: formData.get("name"),
+          message:
+            "Thank you for submitting your paper to the Journal of Academic Inquiry for consideration. Your submission has been received and will undergo a thorough review process. Please note that we will contact you with any updates or requests for further information during the evaluation process.\n\nIf you have any additional questions about your submission, feel free to reply to this email.\n\nBest,\nEditorial Team\nJournal of Academic Inquiry",
+        };
+
+        try {
+          const response = await fetch("/api/confirmation", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(confirmationData),
+          });
+
+          if (!response.ok) {
+            console.error("Failed to send confirmation email");
+          }
+        } catch (error) {
+          console.error("Error sending confirmation email:", error);
+        }
+      };
+
+      sendConfirmationEmail();
+    }
+  }, [isSubmitted, isFailed]);
 
   return (
     <div className="page">

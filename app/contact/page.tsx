@@ -50,9 +50,9 @@ export default function Contact() {
       const sendConfirmationEmail = async () => {
         const formData = new FormData(formRef.current!);
         const confirmationData = {
-          from: "support@journalofinquiry.org",
+          from: `"Support Team" <support@journalofinquiry.org>`,
           to: formData.get("email"),
-          subject: `[JAI Support] ${formData.get("subject")}`,
+          subject: "Your Message Has Been Received",
           name: formData.get("name"),
           message:
             "Thank you for reaching out to us.\nYour message has been received, and a member of our support team will get back to you shortly.\n\nFeel free to reply to this email with any additional information.\n\nBest,\nSupport Team\nJournal of Academic Inquiry",

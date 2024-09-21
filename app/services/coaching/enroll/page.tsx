@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaSpinner } from "react-icons/fa6";
 
 export default function CoachingForm() {
@@ -59,6 +59,38 @@ export default function CoachingForm() {
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    if (isSubmitted && !isFailed) {
+      const sendConfirmationEmail = async () => {
+        const formData = new FormData(formRef.current!);
+        const confirmationData = {
+          from: `"Coaching Team" <coaching@journalofinquiry.org>`,
+          to: formData.get("email"),
+          subject: "Coaching Service - Enrollment Confirmation",
+          name: formData.get("name"),
+          message:
+            "Thank you for enrolling in our personalized coaching program. One of our academic coaches will reach out to you shortly to get started on your academic journey.\n\nIf you have any questions in the meantime, feel free to reply to this email.\n\nBest,\nCoaching Team\nJournal of Academic Inquiry",
+        };
+
+        try {
+          const response = await fetch("/api/confirmation", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(confirmationData),
+          });
+
+          if (!response.ok) {
+            console.error("Failed to send confirmation email");
+          }
+        } catch (error) {
+          console.error("Error sending confirmation email:", error);
+        }
+      };
+
+      sendConfirmationEmail();
+    }
+  }, [isSubmitted, isFailed]);
 
   return (
     <div className="page">
