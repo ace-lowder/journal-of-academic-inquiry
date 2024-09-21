@@ -9,7 +9,7 @@ export default function Subscribe() {
         <div className="container">
           <div className="section items-center justify-center md:gap-12">
             <Image
-              src="/article.png"
+              src="/issue.png"
               alt="Latest Issue"
               width={200}
               height={200}

@@ -44,11 +44,11 @@ export default function Home() {
             <h1 className="w-full text-center">Featured Article</h1>
             <Image
               src="/article.png"
-              alt="Issue Cover"
+              alt="Featured Article"
               width={850}
               height={1100}
               className="border w-full h-auto hover:brightness-95 hover:cursor-pointer"
-              onClick={() => window.open("/test_paper.pdf", "_blank")}
+              onClick={() => window.open("/article.pdf", "_blank")}
             />
           </div>
           <div className="flex flex-col gap-4 w-full lg:w-[30%]">
