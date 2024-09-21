@@ -1,49 +1,85 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FaSpinner } from "react-icons/fa6";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isFailed, setIsFailed] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setIsSubmitting(true);
+    setIsFailed(false);
 
-    const formData = {
-      name: (document.getElementById("name") as HTMLInputElement).value,
-      email: (document.getElementById("email") as HTMLInputElement).value,
-      subject: (document.getElementById("subject") as HTMLInputElement).value,
-      message: (document.getElementById("message") as HTMLTextAreaElement)
-        .value,
+    const formData = new FormData(formRef.current!);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
     };
 
     try {
       const response = await fetch("/api/form/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
 
       if (response.ok) {
         setIsSubmitted(true);
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
+        setIsFailed(true);
         console.error("Failed to send email");
       }
     } catch (error) {
+      setIsFailed(true);
       console.error("Error:", error);
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  useEffect(() => {
+    if (isSubmitted && !isFailed) {
+      const sendConfirmationEmail = async () => {
+        const formData = new FormData(formRef.current!);
+        const confirmationData = {
+          from: "support@journalofinquiry.org",
+          to: formData.get("email"),
+          subject: `[JAI Support] ${formData.get("subject")}`,
+          name: formData.get("name"),
+          message:
+            "Thank you for reaching out to us.\nYour message has been received, and a member of our support team will get back to you shortly.\n\nFeel free to reply to this email with any additional information.\n\nBest,\nSupport Team\nJournal of Academic Inquiry",
+        };
+
+        try {
+          const response = await fetch("/api/confirmation", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(confirmationData),
+          });
+
+          if (!response.ok) {
+            console.error("Failed to send confirmation email");
+          }
+        } catch (error) {
+          console.error("Error sending confirmation email:", error);
+        }
+      };
+
+      sendConfirmationEmail();
+    }
+  }, [isSubmitted, isFailed]);
+
   return (
     <div className="page">
       <div className="container">
-        {/* Submission Confirmation */}
         {isSubmitted && (
           <div className="section bg-green-100 relative">
             <div className="box w-full">
@@ -52,7 +88,6 @@ export default function Contact() {
                 Your message has been sent successfully. We will get back to you
                 shortly.
               </p>
-              {/* Close button */}
               <button
                 className="absolute !font-sans top-4 right-4 px-2 py-[2px] hover:bg-green-200"
                 onClick={() => setIsSubmitted(false)}
@@ -63,26 +98,19 @@ export default function Contact() {
           </div>
         )}
 
-        {/* Contact Us Section */}
         <div className="section">
           <div className="box w-full">
             <h1>Contact Us</h1>
-            <p>
-              If you have any questions regarding submissions, the journal, or
-              our services, feel free to reach out to us. If you need assistance
-              with the submission process, clarification on guidelines, or
-              information about our programs, we&apos;re happy to assist. Please
-              use the form below to send us a message, and we&apos;ll get back
-              to you as soon as possible.
-            </p>
+            <p>If you have any questions, feel free to use the form below.</p>
           </div>
         </div>
 
-        {/* Contact Form */}
-        <form className="flex flex-col gap-4 md:px-32" onSubmit={handleSubmit}>
+        <form
+          className="flex flex-col gap-4 md:px-32"
+          ref={formRef}
+          onSubmit={handleSubmit}
+        >
           <h1 className="text-center text-3xl mt-8">Contact Form</h1>
-
-          {/* Input Fields */}
           <div className="section mb-4">
             <div className="box w-full">
               <div className="section flex-wrap lg:gap-4">
@@ -93,6 +121,7 @@ export default function Contact() {
                   <input
                     className="w-full"
                     id="name"
+                    name="name"
                     type="text"
                     placeholder="Jane Doe"
                     required
@@ -105,6 +134,7 @@ export default function Contact() {
                   <input
                     className="w-full"
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="jane@example.com"
                     required
@@ -117,6 +147,7 @@ export default function Contact() {
                   <input
                     className="w-full"
                     id="subject"
+                    name="subject"
                     type="text"
                     placeholder="Inquiry about..."
                     required
@@ -129,13 +160,13 @@ export default function Contact() {
                   <textarea
                     className="w-full min-h-48"
                     id="message"
+                    name="message"
                     placeholder="Please enter your message here..."
                     required
                   />
                 </div>
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 className="primary-button"

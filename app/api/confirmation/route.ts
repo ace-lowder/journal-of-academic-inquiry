@@ -5,18 +5,16 @@ import { google } from "googleapis";
 // Create OAuth2 client
 const OAuth2 = google.auth.OAuth2;
 const oauth2Client = new OAuth2(
-  process.env.CLIENT_ID,
-  process.env.CLIENT_SECRET,
-  "https://developers.google.com/oauthplayground"
+  process.env.CLIENT_ID, // Client ID from Google Cloud
+  process.env.CLIENT_SECRET, // Client Secret from Google Cloud
+  "https://developers.google.com/oauthplayground" // Redirect URL
 );
 
 export async function POST(req: NextRequest) {
   try {
-    // Parse the request body to get form data
-    const body = await req.json();
-    const { name, email, subject, message } = body;
+    const { to, from, subject, name, message } = await req.json();
 
-    // Set the refresh token
+    // Set OAuth2 credentials
     oauth2Client.setCredentials({
       refresh_token: process.env.REFRESH_TOKEN,
     });
@@ -24,41 +22,40 @@ export async function POST(req: NextRequest) {
     // Get the access token
     const accessToken = await oauth2Client.getAccessToken();
 
-    // Create transporter using OAuth2
     /* eslint-disable @typescript-eslint/no-explicit-any */
     const transporter: any = nodemailer.createTransport({
       service: "gmail",
       auth: {
         type: "OAuth2",
-        user: process.env.EMAIL_USER, // Your Gmail account
+        user: process.env.EMAIL_USER,
         clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
         refreshToken: process.env.REFRESH_TOKEN,
-        accessToken: accessToken.token, // Access token from OAuth2
+        accessToken: accessToken.token,
       },
     } as any);
     /* eslint-enable @typescript-eslint/no-explicit-any */
 
-    // Define email options using the form data
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
-      subject: `[Contact] ${name} - ${subject}`,
-      text: `From: ${name} (${email})\n\nMessage:\n${message}`,
+      from: from,
+      to: to,
+      subject: subject,
+      text: `Hello ${name},\n\n${message}`,
     };
 
     // Send the email
     const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent:", info.response);
+    console.log("Confirmation email sent:", info.response);
 
+    // Return success response
     return NextResponse.json(
-      { message: "Email sent successfully" },
+      { message: "Confirmation email sent successfully" },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Error sending confirmation email:", error);
     return NextResponse.json(
-      { message: "Failed to send email", error },
+      { message: "Failed to send confirmation email", error },
       { status: 500 }
     );
   }
