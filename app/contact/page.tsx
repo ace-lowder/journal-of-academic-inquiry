@@ -101,7 +101,24 @@ export default function Contact() {
         <div className="section">
           <div className="box w-full">
             <h1>Contact Us</h1>
-            <p>If you have any questions, feel free to use the form below.</p>
+            <p>
+              If you have any questions about our journal, services, or
+              submission process, feel free to get in touch with us using the
+              form below. Whether you&apos;re looking for more information about
+              our coaching services, submitting a paper for review, or inquiring
+              about the journal itself, our team is happy to assist you.
+            </p>
+            <p>
+              We strive to respond to all inquiries within 2 business days. In
+              the meantime, please review our website for answers to common
+              questions.
+            </p>
+            <p>
+              For faster assistance, please ensure that your message includes
+              any relevant details, such as the service you&apos;re inquiring
+              about or the specific nature of your request. The more information
+              you provide, the better we can address your needs.
+            </p>
           </div>
         </div>
 

@@ -101,8 +101,9 @@ export default function CoachingForm() {
             <div className="box w-full">
               <h1>Submission Confirmation</h1>
               <p>
-                Your submission has been received and is being reviewed. We will
-                notify you when it has been approved.
+                Your submission has been received and is being reviewed. One of
+                our academic coaches will reach out to you shortly once your
+                application has been approved.
               </p>
               {/* Close button */}
               <button
