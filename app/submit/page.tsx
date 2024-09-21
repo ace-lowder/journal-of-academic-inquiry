@@ -156,7 +156,7 @@ export default function Submit() {
           ref={formRef}
           onSubmit={handleSubmit}
         >
-          <h1 className="text-center text-3xl mt-8 -mb-4">Submission Form</h1>
+          <h1 className="text-center text-3xl mt-8">Submission Form</h1>
           {/* Input Fields */}
           <div className="section mb-4">
             <div className="box w-full">
@@ -269,6 +269,7 @@ export default function Submit() {
                     id="summary"
                     name="summary"
                     placeholder="Provide a short description (200 - 300 words) summarizing your research, key findings, and contributions."
+                    required
                   />
                 </div>
                 <div className="w-full md:w-1/3 md:grow flex gap-2">

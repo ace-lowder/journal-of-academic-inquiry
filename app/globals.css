@@ -80,7 +80,6 @@ select {
   @apply py-8;
   @apply gap-8;
   @apply px-8;
-  @apply lg:px-0;
 }
 
 .container {

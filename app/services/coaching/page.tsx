@@ -16,7 +16,9 @@ export default function Coaching() {
               program will guide you through the process. Transform your
               research into a high-quality academic paper in just five weeks.
             </p>
-            <button className="primary-button">Enroll Now</button>
+            <Link href="/services/coaching/enroll">
+              <button className="primary-button w-full">Enroll Now</button>
+            </Link>
           </div>
         </div>
       </div>

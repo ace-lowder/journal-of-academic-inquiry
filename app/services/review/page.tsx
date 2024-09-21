@@ -17,7 +17,11 @@ export default function Review() {
               paper for publication in the Journal of Academic Inquiry. Receive
               personal feedback within a few days.
             </p>
-            <button className="primary-button">Submit For Review</button>
+            <Link href="/services/review/submit">
+              <button className="primary-button w-full">
+                Submit For Review
+              </button>
+            </Link>
           </div>
         </div>
       </div>

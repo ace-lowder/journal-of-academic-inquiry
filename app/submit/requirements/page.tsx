@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function rRequirements() {
+export default function Requirements() {
   return (
     <div className="page">
       <div className="container">
