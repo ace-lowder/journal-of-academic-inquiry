@@ -158,7 +158,7 @@ export default function ReviewForm() {
         <div className="section md:gap-12">
           <div className="flex flex-col gap-2 w-full md:grow md:1/2 md:max-w-[420px]">
             <h1>Comprehensive Paper Review</h1>
-            <h2>$100 / review</h2>
+            <h2>$120 / hr</h2>
             <p>
               You&apos;re submitting your research paper for a detailed review
               by our experienced writing coaches. Our online review service is

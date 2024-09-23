@@ -51,7 +51,7 @@ export default function Services() {
           </div>
           <div className="box">
             <h1 className="text-center -mb-2">Online Review</h1>
-            <h2 className="text-center">$100</h2>
+            <h2 className="text-center">$120 / hr</h2>
             <p>
               Our Online Review service offers comprehensive feedback on
               academic papers, providing authors with detailed critiques and

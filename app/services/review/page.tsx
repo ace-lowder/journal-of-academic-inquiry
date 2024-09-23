@@ -10,7 +10,7 @@ export default function Review() {
             <h1 className="-mb-2">
               Get Expert Feedback with Our Online Review Service
             </h1>
-            <h2>$100</h2>
+            <h2>$120 / hr</h2>
             <p>
               Improve your chances of publication with detailed feedback from
               experienced writing coaches. Get the insights you to refine your
