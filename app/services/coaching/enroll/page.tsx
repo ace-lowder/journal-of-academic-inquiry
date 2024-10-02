@@ -138,7 +138,7 @@ export default function CoachingForm() {
         <div className="section md:gap-12">
           <div className="flex flex-col gap-2 w-full md:grow md:1/2 md:max-w-[420px]">
             <h1>Personalized Academic Coaching</h1>
-            <h2>$180 / hr</h2>
+            <h2>$190 / hr</h2>
             <p>
               You&apos;re enrolling in our 5-week coaching program designed to
               help you craft a high-quality academic paper from start to finish.

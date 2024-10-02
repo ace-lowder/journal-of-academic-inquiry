@@ -10,7 +10,7 @@ export default function Coaching() {
             <h1 className="-mb-2">
               Personalized Coaching for Academic Success
             </h1>
-            <h2>$180 / hr</h2>
+            <h2>$190 / hr</h2>
             <p>
               Looking to refine your research skills? Our personalized coaching
               program will guide you through the process. Transform your
