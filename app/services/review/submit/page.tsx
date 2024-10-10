@@ -85,9 +85,9 @@ export default function ReviewForm() {
       const sendConfirmationEmail = async () => {
         const formData = new FormData(formRef.current!);
         const confirmationData = {
-          from: `"Coaching Team" <coaching@journalofinquiry.org>`,
+          from: `Review Team" <review@journalofinquiry.org>`,
           to: formData.get("email"),
-          subject: "Coaching Service - Enrollment Confirmation",
+          subject: "Online Review Service - Submission Confirmation",
           name: formData.get("first"),
           message:
             "Thank you for submitting your paper for our online review service. One of our qualified writing coaches will review your submission and provide you with feedback to help ensure that your paper meets the Journal's requirements for publication.\n\nThe next email you receive will contain information regarding the payment for the review service.\n\nIf you have any specific concerns or areas you'd like us to focus on during the review, feel free to reply to this email.\n\nBest,\nReview Team\nJournal of Academic Inquiry",
