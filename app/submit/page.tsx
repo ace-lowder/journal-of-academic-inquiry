@@ -86,10 +86,10 @@ export default function Submit() {
       const sendConfirmationEmail = async () => {
         const formData = new FormData(formRef.current!);
         const confirmationData = {
-          from: `"Coaching Team" <coaching@journalofinquiry.org>`,
+          from: `"Editorial Team" <submissions@journalofinquiry.org>`,
           to: formData.get("email"),
-          subject: "Coaching Service - Enrollment Confirmation",
-          name: formData.get("name"),
+          subject: "Submission Confirmation",
+          name: formData.get("first"),
           message:
             "Thank you for submitting your paper to the Journal of Academic Inquiry for consideration. Your submission has been received and will undergo a thorough review process. Please note that we will contact you with any updates or requests for further information during the evaluation process.\n\nIf you have any additional questions about your submission, feel free to reply to this email.\n\nBest,\nEditorial Team\nJournal of Academic Inquiry",
         };

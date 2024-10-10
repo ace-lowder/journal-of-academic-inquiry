@@ -85,7 +85,7 @@ export default function ReviewForm() {
       const sendConfirmationEmail = async () => {
         const formData = new FormData(formRef.current!);
         const confirmationData = {
-          from: `Review Team" <review@journalofinquiry.org>`,
+          from: `"Editorial Team" <submissions@journalofinquiry.org>`,
           to: formData.get("email"),
           subject: "Online Review Service - Submission Confirmation",
           name: formData.get("first"),
