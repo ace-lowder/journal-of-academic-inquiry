@@ -68,7 +68,7 @@ export default function CoachingForm() {
           from: `"Coaching Team" <coaching@journalofinquiry.org>`,
           to: formData.get("email"),
           subject: "Coaching Service - Enrollment Confirmation",
-          name: formData.get("name"),
+          name: formData.get("first"),
           message:
             "Thank you for enrolling in our personalized coaching program. One of our academic coaches will reach out to you shortly to get started on your academic journey.\n\nIf you have any questions in the meantime, feel free to reply to this email.\n\nBest,\nCoaching Team\nJournal of Academic Inquiry",
         };
