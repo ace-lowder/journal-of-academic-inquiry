@@ -33,14 +33,14 @@ export default function Services() {
             <p>
               Our personalized coaching program is tailored to help students and
               early-career researchers develop the skills necessary to produce
-              high-quality academic papers. Over a five-week period,
-              participants receive one-on-one mentorship from experienced
-              scholars who provide guidance on everything from selecting a
-              research topic to refining the final draft. By the end of the
-              program, students will have completed a full academic paper that
-              meets the rigorous standards of the Journal of Academic Inquiry.
-              This program is ideal for those seeking structured support and
-              expert advice to enhance their academic writing capabilities.
+              high-quality academic papers. Participants receive one-on-one
+              mentorship from experienced scholars who provide guidance on
+              everything from selecting a research topic to refining the final
+              draft. By the end of the program, students will have completed a
+              full academic paper that meets the rigorous standards of the
+              Journal of Academic Inquiry. This program is ideal for those
+              seeking structured support and expert advice to enhance their
+              academic writing capabilities.
             </p>
             <button
               className="primary-button"

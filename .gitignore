@@ -1,24 +1,21 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
+node_modules
 
-# Frontend dependencies and build files
-/frontend/node_modules
-/frontend/.next/
-/frontend/out/
+# Next.js build output
+.next/
 
-# Backend dependencies and build files
-/backend/node_modules
+# Public folder outputs (for exported builds)
+out/
 
-# Dependencies for both
-/.pnp
-.pnp.js
-.yarn/install-state.gz
+# Tailwind and PostCSS config caches
+*.cache
 
-# Testing
-/frontend/coverage
-/backend/coverage
+# TypeScript
+*.tsbuildinfo
 
-# Production build (if applicable)
-/build
+# Environment files
+.env
+*.local
 
 # Misc
 .DS_Store
@@ -28,14 +25,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Local environment files
-/frontend/.env*.local
-/backend/.env*.local
-
-# Vercel
-.vercel
-
-# TypeScript
-*.tsbuildinfo
-next-env.d.ts

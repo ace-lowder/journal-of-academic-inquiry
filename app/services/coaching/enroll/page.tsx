@@ -140,18 +140,15 @@ export default function CoachingForm() {
             <h1>Personalized Academic Coaching</h1>
             <h2>$190 / hr</h2>
             <p>
-              You&apos;re enrolling in our 5-week coaching program designed to
-              help you craft a high-quality academic paper from start to finish.
-              Over the course of five weeks, you&apos;ll receive expert
-              one-on-one mentorship tailored to your specific needs. Whether
-              you&apos;re new to academic writing or looking to improve your
-              skills, our program offers personalized support at every
-              stage—from topic selection to final revisions.
+              You&apos;re enrolling in our coaching program designed to help you
+              craft a high-quality academic paper from start to finish.
+              Throughout the program, you&apos;ll receive expert one-on-one
+              mentorship tailored to your specific needs. Whether you&apos;re
+              new to academic writing or looking to improve your skills, our
+              program offers personalized support at every stage—from topic
+              selection to final revisions.
             </p>
             <ul>
-              <li>
-                <b>Duration</b>: 5 weeks of structured guidance
-              </li>
               <li>
                 <b>One-on-One Mentorship</b>: Direct, personalized feedback
               </li>

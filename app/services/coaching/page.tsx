@@ -14,7 +14,7 @@ export default function Coaching() {
             <p>
               Looking to refine your research skills? Our personalized coaching
               program will guide you through the process. Transform your
-              research into a high-quality academic paper in just five weeks.
+              research into a high-quality academic paper.
             </p>
             <Link href="/services/coaching/enroll">
               <button className="primary-button w-full">Enroll Now</button>
@@ -29,12 +29,12 @@ export default function Coaching() {
           <div className="box">
             <h1>About the Program</h1>
             <p>
-              Our five-week coaching program is designed to provide personalized
-              support to students and early-career researchers. Through
-              one-on-one mentorship, participants will learn to navigate the
-              complexities of academic writing, from topic selection to final
-              revisions. By the end of the program, you will have a polished
-              paper ready for submission to scholarly journals.
+              Our coaching program is designed to provide personalized support
+              to students and early-career researchers. Through one-on-one
+              mentorship, participants will learn to navigate the complexities
+              of academic writing, from topic selection to final revisions. By
+              the end of the program, you will have a polished paper ready for
+              submission to scholarly journals.
             </p>
             <div className="w-full flex flex-col md:flex-row">
               <ul className="w-full md:grow md:w-1/2">
@@ -54,48 +54,47 @@ export default function Coaching() {
           <h1>How It Works</h1>
           <div className="section sm:flex-row sm:flex-wrap">
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 1: Paper Topic & Thesis (Week 1)</h1>
+              <h1>Step 1: Paper Topic & Thesis</h1>
               <p>
-                In the first week, we&apos;ll help you refine your research
-                topic and develop a strong, clear thesis statement that will
-                guide your paper. This session sets the foundation for the
-                entire writing process.
+                First, we&apos;ll help you refine your research topic and
+                develop a strong, clear thesis statement that will guide your
+                paper. This step sets the foundation for the entire writing
+                process.
               </p>
             </div>
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 2: Research & Outline (Week 2)</h1>
+              <h1>Step 2: Research & Outline</h1>
               <p>
-                During week two, we focus on gathering and organizing your
-                research. Together, we&apos;ll create a detailed outline that
-                serves as a roadmap for your paper, ensuring your arguments are
+                Next, we focus on gathering and organizing your research.
+                Together, we&apos;ll create a detailed outline that serves as a
+                roadmap for your paper, ensuring your arguments are
                 well-structured and supported.
               </p>
             </div>
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 3: Drafting the Paper (Week 3)</h1>
+              <h1>Step 3: Drafting the Paper</h1>
               <p>
-                In the third week, you&apos;ll begin drafting the main sections
-                of your paper. We&apos;ll meet to review your progress and
-                provide feedback on your introduction, body paragraphs, and
+                Once your outline is ready, you&apos;ll begin drafting the main
+                sections of your paper. We&apos;ll meet to review your progress
+                and provide feedback on your introduction, body paragraphs, and
                 conclusions, helping you stay on track.
               </p>
             </div>
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 4: Feedback & Revision (Week 4)</h1>
+              <h1>Step 4: Feedback & Revision</h1>
               <p>
-                Week four is dedicated to revising your paper based on detailed
-                feedback. We&apos;ll focus on improving clarity, strengthening
-                arguments, and refining the structure to meet academic
-                standards.
+                After drafting, we&apos;ll focus on revising your paper based on
+                detailed feedback. This step is about improving clarity,
+                strengthening arguments, and refining the structure to meet
+                academic standards.
               </p>
             </div>
             <div className="box w-full sm:grow sm:w-[40%]">
-              <h1>Step 5: Final Review & Polishing (Week 5)</h1>
+              <h1>Step 5: Final Review & Polishing</h1>
               <p>
-                In the final week, we&apos;ll perform a comprehensive review of
-                your paper, fine-tuning grammar, formatting, and style. By the
-                end of the session, your paper will be polished and ready for
-                submission.
+                Finally, we&apos;ll perform a comprehensive review of your
+                paper, fine-tuning grammar, formatting, and style. By the end of
+                this step, your paper will be polished and ready for submission.
               </p>
             </div>
           </div>
@@ -108,7 +107,7 @@ export default function Coaching() {
           <h1 className="text-center">Testimonials</h1>
           <div className="section flex-wrap items-stretch">
             <div className="box w-full md:grow md:w-1/4">
-              <h1 className="-mb-1 text-center">Amanda R</h1>
+              <h1 className="-mb-1 text-center">Sam K</h1>
               <h2 className="text-xs mb-2 text-center">High School Senior</h2>
               <p>
                 The coaching program was exactly what I needed to take my paper
@@ -189,11 +188,9 @@ export default function Coaching() {
               <li>
                 We strive to provide a high-quality coaching experience that
                 meets your expectations. If you are not satisfied with the
-                program, please contact us within the first two weeks to discuss
-                your concerns. We offer a partial refund policy during this
-                period to ensure your satisfaction. Our team is dedicated to
-                resolving any issues and making sure you receive the support you
-                need.
+                program, please contact us to discuss your concerns. Our team is
+                dedicated to resolving any issues and making sure you receive
+                the support you need.
               </li>
             </ul>
           </div>

@@ -104,10 +104,10 @@ export default function Subscribe() {
           <div className="box">
             <h1>Subscription Pricing</h1>
             <p>
-              Our subscription service is available for $49.md:w-1/299 per
-              month, providing unlimited access to all new issues and our
-              complete archive of past publications. Subscribers will also
-              receive early access to special editions and calls for papers.
+              Our subscription service is available for $49 per month, providing
+              unlimited access to all new issues and our complete archive of
+              past publications. Subscribers will also receive early access to
+              special editions and calls for papers.
             </p>
           </div>
         </div>

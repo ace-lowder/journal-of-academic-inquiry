@@ -262,15 +262,15 @@ export default function Home() {
             <h1>Coaching</h1>
             <p>
               Our tailored coaching program is designed to guide students
-              through the process of writing a comprehensive academic paper over
-              a span of five weeks. This intensive program provides personalized
-              support and expert guidance, ensuring that each participant
-              develops the skills necessary to produce high-quality research
-              that meets the rigorous standards of the Journal of Academic
-              Inquiry. From selecting a compelling topic to conducting thorough
-              research and refining the final draft, our coaches are committed
-              to helping students achieve academic excellence and gain
-              confidence in their scholarly writing abilities.
+              through the process of writing a comprehensive academic paper.
+              This intensive program provides personalized support and expert
+              guidance, ensuring that each participant develops the skills
+              necessary to produce high-quality research that meets the rigorous
+              standards of the Journal of Academic Inquiry. From selecting a
+              compelling topic to conducting thorough research and refining the
+              final draft, our coaches are committed to helping students achieve
+              academic excellence and gain confidence in their scholarly writing
+              abilities.
             </p>
           </div>
         </div>

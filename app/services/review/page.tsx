@@ -55,20 +55,6 @@ export default function Review() {
             </div>
           </div>
         </div>
-
-        {/* How It Works */}
-
-        <div className="section sm:flex-row sm:flex-wrap">
-          <div className="box w-full sm:grow sm:w-[40%]">
-            <h1>How It Works</h1>
-            <p>
-              In the first week, we&apos;ll help you refine your research topic
-              and develop a strong, clear thesis statement that will guide your
-              paper. This session sets the foundation for the entire writing
-              process.
-            </p>
-          </div>
-        </div>
       </div>
 
       {/* Testimonials */}
