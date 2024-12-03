@@ -18,11 +18,14 @@ export default function Subscribe() {
             <div className="box md:w-1/2 lg:w-1/3 h-fit">
               <h1>Stay Informed with the Latest in Scholarly Research</h1>
               <p>
-                Subscribe now for <b>$49.99</b> a month to access the most
-                recent issue and groundbreaking research from leading academics.
+                Request a subscription for <b>$49.99</b> a month to access the
+                most recent issue and groundbreaking research from leading
+                academics.
               </p>
 
-              <button className="primary-button">Subscribe</button>
+              <Link href="/contact">
+                <button className="primary-button">Contact Us</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -80,8 +83,9 @@ export default function Subscribe() {
                 of interest. Our monthly issues feature in-depth articles, case
                 studies, and scholarly papers that offer fresh insights and
                 innovative solutions to contemporary challenges. By subscribing,
-                you’ll gain unlimited access to our latest issues and archived
-                content, ensuring you never miss an important breakthrough.
+                you&apos;ll gain unlimited access to our latest issues and
+                archived content, ensuring you never miss an important
+                breakthrough.
               </p>
             </div>
             <div className="mt-6">

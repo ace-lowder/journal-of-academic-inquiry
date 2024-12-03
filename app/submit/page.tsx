@@ -169,6 +169,7 @@ export default function Submit() {
               paper is rigorously reviewed for its academic merit, originality,
               and adherence to our guidelines.
             </p>
+            <h2 className="text-center -mb-2">$250 / submission</h2>
             <p className="text-center">
               Before you submit, please take a moment to review our{" "}
               <a href="/submit/requirements">submission requirements</a> to
