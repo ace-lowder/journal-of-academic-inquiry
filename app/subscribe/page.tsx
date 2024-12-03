@@ -24,7 +24,7 @@ export default function Subscribe() {
               </p>
 
               <Link href="/contact">
-                <button className="primary-button">Contact Us</button>
+                <button className="primary-button w-full">Contact Us</button>
               </Link>
             </div>
           </div>
