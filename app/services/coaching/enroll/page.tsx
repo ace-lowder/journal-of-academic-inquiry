@@ -11,6 +11,7 @@ export default function CoachingForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    window.open("https://www.paypal.com/ncp/payment/E3E88AM27VVTG", "_blank");
 
     setIsSubmitting(true);
     setIsFailed(false);
