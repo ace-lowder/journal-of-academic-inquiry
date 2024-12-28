@@ -13,6 +13,8 @@ export default function Submit() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    window.open("https://www.paypal.com/ncp/payment/X829CW3AC57MC", "_blank");
+
     setIsSubmitting(true);
     setIsFailed(false);
 

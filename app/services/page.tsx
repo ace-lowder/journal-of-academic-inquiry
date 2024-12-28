@@ -29,7 +29,7 @@ export default function Services() {
         <div className="section">
           <div className="box">
             <h1 className="text-center -mb-2">Coaching</h1>
-            <h2 className="text-center">$190 / hr</h2>
+            <h2 className="text-center">$1200 / 5 sessions</h2>
             <p>
               Our personalized coaching program is tailored to help students and
               early-career researchers develop the skills necessary to produce
@@ -49,7 +49,7 @@ export default function Services() {
               Learn More
             </button>
           </div>
-          <div className="box">
+          {/* <div className="box">
             <h1 className="text-center -mb-2">Online Review</h1>
             <h2 className="text-center">$120 / hr</h2>
             <p>
@@ -71,7 +71,7 @@ export default function Services() {
             >
               Learn More
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
