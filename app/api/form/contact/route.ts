@@ -67,10 +67,17 @@ export async function POST(req: NextRequest) {
     const info = await transporter.sendMail(mailOptions);
     console.log("Email sent:", info.response);
 
-    return NextResponse.json(
+    const response = NextResponse.json(
       { message: "Email sent successfully" },
       { status: 200 }
     );
+
+    // Add CORS headers
+    response.headers.set("Access-Control-Allow-Origin", origin);
+    response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+    response.headers.set("Access-Control-Allow-Headers", "Content-Type");
+
+    return response;
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(
@@ -78,4 +85,21 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+export async function OPTIONS(req: NextRequest) {
+  const origin = req.headers.get("origin");
+
+  if (!origin || !allowedOrigins.includes(origin)) {
+    return NextResponse.json({}, { status: 403 });
+  }
+
+  const response = NextResponse.json({}, { status: 204 });
+
+  // Add CORS headers for preflight requests
+  response.headers.set("Access-Control-Allow-Origin", origin);
+  response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+  response.headers.set("Access-Control-Allow-Headers", "Content-Type");
+
+  return response;
 }
