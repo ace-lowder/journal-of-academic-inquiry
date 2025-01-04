@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
   try {
     // Parse the request body to get form data
     const body = await req.json();
-    const { name, email, subject, message } = body;
+    const { name, email, subject, message, emailUser } = body;
 
     // Set the refresh token
     oauth2Client.setCredentials({
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     // Define email options using the form data
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: emailUser || process.env.EMAIL_USER,
       subject: `[Contact] ${name} - ${subject}`,
       text: `From: ${name} (${email})\n\nMessage:\n${message}`,
     };
