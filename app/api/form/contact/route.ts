@@ -10,8 +10,24 @@ const oauth2Client = new OAuth2(
   "https://developers.google.com/oauthplayground"
 );
 
+const allowedOrigins = [
+  "https://journalofacademicinquiry.org",
+  "https://preppathways.net",
+  "http://localhost:5173", // Allow local development
+];
+
 export async function POST(req: NextRequest) {
   try {
+    // Check the origin of the request
+    const origin = req.headers.get("origin");
+
+    if (!origin || !allowedOrigins.includes(origin)) {
+      return NextResponse.json(
+        { message: "Forbidden: Origin not allowed" },
+        { status: 403 }
+      );
+    }
+
     // Parse the request body to get form data
     const body = await req.json();
     const { name, email, subject, message, emailUser } = body;
