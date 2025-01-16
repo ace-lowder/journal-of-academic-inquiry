@@ -27,10 +27,11 @@ export default function CoachingForm() {
       lastName: formData.get("last"),
       email: formData.get("email"),
       school: formData.get("school"),
+      year: formData.get("year"),
       gpa: formData.get("gpa"),
       subject: formData.get("subject"),
       why: formData.get("why"),
-      notes: formData.get("notes"),
+      interests: formData.get("interest"),
       written, // boolean
       published, // boolean
     };
@@ -218,7 +219,7 @@ export default function CoachingForm() {
                       required
                     />
                   </div>
-                  <div className="w-full md:w-1/4 md:grow">
+                  <div className="w-full md:w-1/3 md:grow">
                     <label className="block" htmlFor="school">
                       School Name
                     </label>
@@ -230,7 +231,18 @@ export default function CoachingForm() {
                       placeholder="California High School"
                     />
                   </div>
-                  <div className="w-full md:w-1/4 md:grow">
+                  <div className="w-full md:w-1/3 md:grow">
+                    <label className="block" htmlFor="year">
+                      Year in School
+                    </label>
+                    <select className="w-full" id="year" name="year">
+                      <option value="Freshman">Freshman</option>
+                      <option value="Sophomore">Sophomore</option>
+                      <option value="Junior">Junior</option>
+                      <option value="Senior">Senior</option>
+                    </select>
+                  </div>
+                  <div className="w-full md:w-1/3 md:grow">
                     <label className="block" htmlFor="gpa">
                       Current GPA
                     </label>
@@ -244,7 +256,7 @@ export default function CoachingForm() {
                       required
                     />
                   </div>
-                  <div className="w-full md:w-1/4 md:grow">
+                  <div className="w-full md:w-1/3 md:grow">
                     <label className="block" htmlFor="subject">
                       Primary Subject of Interest
                     </label>
@@ -278,14 +290,14 @@ export default function CoachingForm() {
                     />
                   </div>
                   <div className="w-full md:grow">
-                    <label className="block" htmlFor="why">
-                      Notes
+                    <label className="block" htmlFor="interest">
+                      Topics of Interest
                     </label>
                     <textarea
                       className="w-full min-h-32"
-                      id="why"
-                      name="why"
-                      placeholder="Optional: Share anything else you'd like us to know about your academic background or goals."
+                      id="interest"
+                      name="interest"
+                      placeholder="Share a few topics that you are interested in writing about."
                     />
                   </div>
                   <div className="w-full flex gap-2">
