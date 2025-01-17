@@ -167,7 +167,7 @@ export default function CoachingForm() {
             <p className="text-xs mt-4">
               *This coaching service is ideal for high school students,
               early-career researchers, and anyone seeking to produce a
-              well-researched, well-written academic paper. After paying $1200,
+              well-researched, well-written academic paper. After paying $950,
               you will receive 5 sessions of personalized coaching. Any
               additional sessions will be $210 / hr afterward.
             </p>
