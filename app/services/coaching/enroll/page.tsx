@@ -148,9 +148,12 @@ export default function CoachingForm() {
               mentorship tailored to your specific needs. Whether you&apos;re
               new to academic writing or looking to improve your skills, our
               program offers personalized support at every stage—from topic
-              selection to final revisions. We highly recommend $950 / 5
-              sessions of coaching for those starting their paper from scratch
-              as it offers a discounted rate and comprehensive guidance.
+              selection to final revisions.
+            </p>
+            <p>
+              We highly recommend $950 / 5 sessions of coaching for those
+              starting their paper from scratch as it offers a discounted rate
+              and comprehensive guidance.
             </p>
             <ul>
               <li>
