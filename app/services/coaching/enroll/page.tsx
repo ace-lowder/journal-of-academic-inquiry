@@ -140,7 +140,7 @@ export default function CoachingForm() {
         <div className="section md:gap-12">
           <div className="flex flex-col gap-2 w-full md:grow md:1/2 md:max-w-[420px]">
             <h1>Personalized Academic Coaching</h1>
-            <h2>$1200 / 5 sessions</h2>
+            <h2>$950 / 5 sessions or $210 / session</h2>
             <p>
               You&apos;re enrolling in our coaching program designed to help you
               craft a high-quality academic paper from start to finish.
@@ -148,7 +148,9 @@ export default function CoachingForm() {
               mentorship tailored to your specific needs. Whether you&apos;re
               new to academic writing or looking to improve your skills, our
               program offers personalized support at every stage—from topic
-              selection to final revisions.
+              selection to final revisions. We highly recommend $950 / 5
+              sessions of coaching for those starting their paper from scratch
+              as it offers a discounted rate and comprehensive guidance.
             </p>
             <ul>
               <li>
@@ -167,7 +169,7 @@ export default function CoachingForm() {
               early-career researchers, and anyone seeking to produce a
               well-researched, well-written academic paper. After paying $1200,
               you will receive 5 sessions of personalized coaching. Any
-              additional sessions will be $190 / hr afterward.
+              additional sessions will be $210 / hr afterward.
             </p>
           </div>
 
