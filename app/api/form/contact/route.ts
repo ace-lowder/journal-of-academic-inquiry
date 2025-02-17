@@ -90,14 +90,12 @@ export async function POST(req: NextRequest) {
 export async function OPTIONS(req: NextRequest) {
   const origin = req.headers.get("origin");
 
-  if (!origin || !allowedOrigins.includes(origin)) {
-    return NextResponse.json({}, { status: 403 });
-  }
-
   const response = NextResponse.json({}, { status: 204 });
 
   // Add CORS headers for preflight requests
-  response.headers.set("Access-Control-Allow-Origin", origin);
+  if (origin && allowedOrigins.includes(origin)) {
+    response.headers.set("Access-Control-Allow-Origin", origin);
+  }
   response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
   response.headers.set("Access-Control-Allow-Headers", "Content-Type");
 
