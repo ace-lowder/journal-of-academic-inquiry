@@ -89,13 +89,17 @@ export async function POST(req: NextRequest) {
 
 export async function OPTIONS(req: NextRequest) {
   const origin = req.headers.get("origin");
+  console.log("CORS Preflight Request from:", origin); // Log incoming origin
 
   const response = NextResponse.json({}, { status: 204 });
 
-  // Add CORS headers for preflight requests
   if (origin && allowedOrigins.includes(origin)) {
     response.headers.set("Access-Control-Allow-Origin", origin);
+    console.log("Allowed origin:", origin); // Log allowed origin
+  } else {
+    console.log("Blocked origin:", origin); // Log blocked origin
   }
+
   response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
   response.headers.set("Access-Control-Allow-Headers", "Content-Type");
 
